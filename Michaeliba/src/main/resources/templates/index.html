@@ -7,18 +7,7 @@
     </head>
     
     <body>
-        <div>
-            <table>
-                <tr>
-                    <th>Usuario</th>
-                    <th>Contraseña</th>
-                </tr>
-                <tr th:each="usuario : ${users}">
-                    <td th:text="${usuario.user}"></td>
-                    <td th:text="${usuario.password}"></td>
-                </tr>
-            </table>
-        </div>
-        <a th:href="@{/crear-usuario}">Crear usuario</a>
+        <h1>INICIO</h1>
+        <a th:href="@{/administrar-usuarios}">Administrar usuarios</a>
     </body>
 </html>

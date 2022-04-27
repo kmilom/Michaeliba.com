@@ -22,6 +22,6 @@ public class Assamblies implements Serializable{
     private String date;
     private String time;
     private String duration;
-    private int quorum;
+    private float quorum;
     private String suburb;
 }

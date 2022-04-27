@@ -8,13 +8,17 @@
     <body>
         <h1>Crear Usuario</h1>
         <form th:action="@{/guardar}" method="post" th:object="${usuario}">
-            <br/>
+            <input type="hidden" name="id_usuario" th:field="*{id_users}"/>
+            <br/><br/>
             <label for="user">Usuario: </label>
             <input type="text" name="user" th:field="*{user}"/>
-            <br/>
+            <br/><br/>
             <label for="password">Contraseña: </label>
-            <input type="password" name="password" th:field="*{password}"/>
+            <input type="text" name="password" th:field="*{password}"/>
+            <br/><br/>
+            <input type="submit" name="guardar" value="Guardar"/>
         </form>
+        <br/>
         <a th:href="@{/}">Regresar</a>
     </body>
 </html>

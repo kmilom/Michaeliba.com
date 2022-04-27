@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Michaeliba</title>
+        <meta charset="UTF-8">
+    </head>
+    
+    <body>
+        <h1>Panel administrativo</h1>
+        <br/><br/>
+        <div>
+            <table border="1">
+                <tr>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                <tr th:each="usuario : ${usuarios}">
+                    <td th:text="${usuario.user}"></td>
+                    <td th:text="${usuario.password}"></td>
+                    <td><a th:href="@{/editar/} + ${usuario.id_users}" th:text="Editar"/></td>
+                </tr>
+            </table>
+        </div>
+        <br/><br/>
+        <a th:href="@{/crear-usuario}">Crear usuarios</a>
+    </body>
+</html>
