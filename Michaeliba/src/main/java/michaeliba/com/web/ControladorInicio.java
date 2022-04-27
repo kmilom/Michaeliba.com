@@ -38,7 +38,7 @@ public class ControladorInicio {
     @PostMapping("/guardar")
     public String guardar(Users usuario){
         usersService.guardar(usuario);
-        return "redirect:/";
+        return "redirect:/administrar-usuarios";
     }
     
     @GetMapping("/editar/{id_users}")
@@ -46,5 +46,11 @@ public class ControladorInicio {
         usuario = usersService.buscarUsers(usuario);
         model.addAttribute("usuario", usuario);
         return "crearUsuario";
+    }
+    
+    @GetMapping("/eliminar")
+    public String eliminar(Users usuario){
+        usersService.eliminar(usuario);
+        return "redirect:/administrar-usuarios";
     }
 }
