@@ -6,7 +6,8 @@
     </head>
     
     <body>
-        <h1>Crear Usuario</h1>
+        <header th:replace="layout/plantilla :: header"></header>
+        <h2>Crear Usuario</h2>
         <form th:action="@{/guardar}" method="post" th:object="${usuario}">
             <input type="hidden" name="id_usuario" th:field="*{id_users}"/>
             <br/><br/>

@@ -5,7 +5,11 @@
     </head>
     
     <body>
-        <h1>Panel administrativo</h1>
+        <header th:replace="layout/plantilla :: header"></header>
+        <br/><br/>
+        <a th:href="@{/crear-usuario}">Crear usuarios</a>
+        <br/><br/>
+        <a th:href="@{/}">Inicio</a>
         <br/><br/>
         <div>
             <table border="1">
@@ -23,7 +27,6 @@
                 </tr>
             </table>
         </div>
-        <br/><br/>
-        <a th:href="@{/crear-usuario}">Crear usuarios</a>
+        <footer th:replace="layout/plantilla :: footer"></footer>
     </body>
 </html>
